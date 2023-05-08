@@ -1,0 +1,93 @@
+
+:root {
+    --background-img: url('../img/bckground.jpg');
+    --default-transition: all 0.2s ease-in-out;
+    --header-color: rgba(2, 0, 19, 0.563);
+    --tab-color: rgba(188, 206, 124, 0.863);
+    --h1-color: #0e273c;
+}
+
+h1 {
+    color: #e2b932;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    background: no-repeat var(--background-img);
+}
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 1px;
+    background-color: var(--header-color);
+    margin-bottom: 20px;
+}
+
+.newTab {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.homeContent {
+    float: right;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--tab-color);
+    align-items: center;
+}
+
+.menuContent {
+    float: center;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--tab-color);
+}
+.menuList {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: grid;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.contactContent {
+    display: block;
+    width: 100%;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--tab-color);
+}
+
+btnContainer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+}
+
+button {
+    position: relative;
+    font-size: 1.5rem;
+    appearance: none;
+    border: none;
+    width: 13rem;
+    background-color: inherit;
+    color:rgba(188, 206, 124, 0.863);
+    transition: var(--default-transition);
+}
+
+button:hover {
+    filter: brightness(150%);
+    cursor: pointer;
+}
